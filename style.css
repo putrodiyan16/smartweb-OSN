@@ -131,15 +131,15 @@ button, .menu-item, .list-item, .back-btn-full {
 }
 
 .logo-container img {
-    height: 140px;       /* Ukuran besar sesuai permintaan Bapak */
-    width: 140px;        /* Ukuran besar sesuai permintaan Bapak */
+    height: 130px;       /* Ukuran besar sesuai permintaan Bapak */
+    width: 130px;        /* Ukuran besar sesuai permintaan Bapak */
     background: white;
     padding: 0;          /* Padding 0 agar logo mepet ke tepi border */
     border-radius: 50%;
     border: 4px solid var(--osn-yellow);
     margin-bottom: 15px;
     box-shadow: var(--shadow-md);
-    object-fit: contain; /* Menjamin logo tidak gepeng/lonjong */
+    object-fit: cover; /* Menjamin logo tidak gepeng/lonjong */
 }
 
 /* --- MENU GRID (KOTAK SERAGAM) --- */

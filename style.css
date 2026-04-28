@@ -94,7 +94,7 @@ button, .menu-item, .list-item, .back-btn-full {
 .welcome-card p {
     color: var(--text-muted);
     margin-bottom: 30px;
-    font-size: 0.95rem;
+    font-size: 0.80rem;
 }
 
 /* TOMBOL KOTAK TEGAS */

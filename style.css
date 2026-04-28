@@ -297,3 +297,35 @@ footer p {
     .header h2 { font-size: 1.8rem; }
     .header { padding: 50px 20px; }
 }
+/* Gaya Tombol Kembali Baru (Lebar & di Bawah) */
+.back-btn-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px; /* Jarak dari konten di atasnya */
+    padding: 15px;
+    background: var(--white);
+    color: var(--osn-blue-main);
+    border: 2px solid var(--osn-blue-main);
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-btn-full:hover {
+    background: var(--osn-blue-light);
+    transform: translateY(-2px);
+}
+
+.back-btn-full i {
+    font-size: 0.9rem;
+}
+
+/* Menghapus gaya tombol kembali lama agar tidak bentrok */
+.back-btn {
+    display: none;
+}

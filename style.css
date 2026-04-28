@@ -2,10 +2,10 @@
 
 /* --- VARIABEL WARNA (Khas OSN IPS Modern) --- */
 :root {
-    --osn-blue-dark: #003366; /* Biru Tua Formal */
-    --osn-blue-main: #0056b3; /* Biru Utama */
-    --osn-blue-light: rgba(230, 240, 255, 0.8); /* Biru Transparan untuk Konten */
-    --osn-yellow: #ffcc00; /* Kuning Emas */
+    --osn-blue-dark: #003366;
+    --osn-blue-main: #0056b3;
+    --osn-blue-light: rgba(230, 240, 255, 0.8);
+    --osn-yellow: #ffcc00;
     --text-dark: #2d3748;
     --text-muted: #718096;
     --white: #ffffff;
@@ -27,16 +27,13 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* MENAMBAHKAN BACKGROUND GAMBAR ANIMASI PETA DUNIA BERWARNA */
     background-image: url('https://img.freepik.com/free-vector/cartoon-world-map-background_23-2148455246.jpg?w=1380');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Gambar tidak ikut scroll */
+    background-attachment: fixed;
 }
 
-/* MENAMBAHKAN LAPISAN SEMI-TRANSPARAN DI ATAS GAMBAR BACKGROUND */
-/* Ini penting agar background berwarna tidak mematikan warna teks materi */
 body::after {
     content: "";
     position: fixed;
@@ -44,13 +41,8 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* Putih semi-transparan (tingkatkan angka 0.7 jika teks kurang jelas) */
-    z-index: -1; /* Berada di antara gambar background dan konten */
-}
-
-/* MENYEMBUNYIKAN LAYER BACKGROUND LAMA JIKA ADA */
-body::before {
-    display: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
 }
 
 /* --- Tombol Global --- */
@@ -83,36 +75,7 @@ button, .menu-item, .list-item, .back-btn-full {
     border: 3px solid var(--osn-yellow);
 }
 
-.welcome-card h1 {
-    font-size: 1.8rem;
-    color: var(--osn-blue-dark);
-    margin-bottom: 15px;
-    font-weight: 800;
-}
-
-.welcome-card p {
-    color: var(--text-muted);
-    margin-bottom: 30px;
-}
-
-.welcome-card button {
-    background: linear-gradient(45deg, var(--osn-blue-main), var(--osn-blue-dark));
-    color: white;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(0,86,179,0.3);
-}
-
-.welcome-card button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,86,179,0.5);
-}
-
-/* --- HEADER --- */
+/* --- HEADER & LOGO --- */
 .header {
     background: linear-gradient(135deg, var(--osn-blue-dark), var(--osn-blue-main));
     color: white;
@@ -120,32 +83,25 @@ button, .menu-item, .list-item, .back-btn-full {
     text-align: center;
     border-radius: 0 0 40px 40px;
     box-shadow: var(--shadow-lg);
-    position: relative;
-    overflow: hidden;
 }
 
 .logo-container img {
-    height: 150px;       /* Ukuran yang Bapak inginkan */
-    width: 150px;        /* Ukuran yang Bapak inginkan */
-    background: white;   /* Ini adalah warna putih di belakang logo */
-    padding: 0;          /* WAJIB 0: agar tidak ada jarak antara logo dan border */
-    border-radius: 50%;  /* Membuat bentuk lingkaran */
+    height: 200px;       /* Ukuran besar sesuai permintaan Bapak */
+    width: 200px;        /* Ukuran besar sesuai permintaan Bapak */
+    background: white;
+    padding: 0;          /* Padding 0 agar logo mepet ke tepi border */
+    border-radius: 50%;
     border: 4px solid var(--osn-yellow);
     margin-bottom: 15px;
     box-shadow: var(--shadow-md);
+    object-fit: contain; /* Menjamin logo tidak gepeng/lonjong */
 }
 
-.header h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* --- MENU GRID --- */
+/* --- MENU GRID (KOTAK SERAGAM) --- */
 .grid-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 15px;
     padding: 30px 20px;
     max-width: 600px;
     margin: 0 auto;
@@ -154,37 +110,37 @@ button, .menu-item, .list-item, .back-btn-full {
 .menu-item {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0,0,0,0.05);
-    padding: 30px 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: center; /* Konten di tengah secara vertikal */
+    gap: 10px;
     cursor: pointer;
     text-decoration: none;
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(2px);
+    
+    /* KUNCI TINGGI AGAR SERAGAM */
+    height: 150px; 
+    padding: 15px;
 }
 
 .menu-item:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
-    background: var(--white);
     border-color: var(--osn-yellow);
 }
 
-.menu-item:active {
-    transform: scale(0.95);
-}
-
 .menu-item i {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 .menu-item span {
     font-weight: 700;
     color: var(--osn-blue-dark);
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* --- SUB HALAMAN --- */
@@ -205,63 +161,30 @@ button, .menu-item, .list-item, .back-btn-full {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.page-title {
-    font-size: 1.8rem;
-    color: var(--osn-blue-dark);
-    margin-bottom: 25px;
-    border-bottom: 4px solid var(--osn-yellow);
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
 .list-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
 
 .list-item {
     background: rgba(255, 255, 255, 0.98);
-    padding: 20px;
+    padding: 18px;
     border-radius: 15px;
     box-shadow: var(--shadow-md);
-    border-left: 5px solid transparent;
     text-decoration: none;
     color: var(--text-dark);
     display: flex;
     align-items: center;
     gap: 10px;
+    font-weight: 500;
 }
 
-.list-item i {
-    color: var(--osn-blue-main);
-}
-
-.list-item:hover {
-    border-left: 5px solid var(--osn-blue-main);
-    transform: translateX(5px);
-    background: var(--white);
-    box-shadow: var(--shadow-lg);
-}
-
-/* Gaya khusus untuk tombol Latihan Soal yang highlight */
 .list-item.highlight {
     background-color: rgba(240, 255, 244, 0.95);
     border: 2px solid #38a169;
-    font-weight: 700;
     color: #2f855a;
-}
-
-.list-item.highlight i {
-    color: #38a169;
-}
-
-.list-item.highlight:hover {
-    background-color: #38a169;
-    color: white;
-}
-.list-item.highlight:hover i {
-    color: white !important;
+    justify-content: center; /* Agar teks Google Form di tengah */
 }
 
 /* --- TOMBOL KEMBALI DI BAWAH --- */
@@ -278,16 +201,12 @@ button, .menu-item, .list-item, .back-btn-full {
     border: 2px solid var(--osn-blue-main);
     border-radius: 15px;
     font-weight: bold;
-    font-size: 1rem;
     cursor: pointer;
-    box-shadow: var(--shadow-md);
 }
 
 .back-btn-full:hover {
     background: var(--osn-blue-main);
     color: white;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
 }
 
 /* --- FOOTER --- */
@@ -295,25 +214,6 @@ footer {
     text-align: center;
     padding: 30px 20px;
     margin-top: auto;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(2px);
-    border-radius: 20px 20px 0 0;
 }
 
-footer p {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    font-weight: bold;
-}
-
-.hidden {
-    display: none;
-}
-
-/* Responsif untuk Tablet/Desktop kecil */
-@media (min-width: 600px) {
-    .header h2 { font-size: 1.8rem; }
-    .header { padding: 50px 20px; }
-}
+.hidden { display: none; }

@@ -125,8 +125,8 @@ button, .menu-item, .list-item, .back-btn-full {
 }
 
 .logo-container img {
-    height: 200px;       /* Ukuran yang Bapak inginkan */
-    width: 200px;        /* Ukuran yang Bapak inginkan */
+    height: 150px;       /* Ukuran yang Bapak inginkan */
+    width: 150px;        /* Ukuran yang Bapak inginkan */
     background: white;   /* Ini adalah warna putih di belakang logo */
     padding: 0;          /* WAJIB 0: agar tidak ada jarak antara logo dan border */
     border-radius: 50%;  /* Membuat bentuk lingkaran */

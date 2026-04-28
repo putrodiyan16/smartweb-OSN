@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Web by Saputro - OSN IPS</title>
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 1. OVERLAY SELAMAT DATANG (Pop-up awal) -->
+    <div id="welcome-overlay" class="welcome-container">
+        <div class="welcome-card">
+            <!-- GANTI TULISAN JUDUL DI BAWAH INI -->
+            <h1>Selamat Datang di Smart Web by Saputro</h1>
+            <!-- GANTI SUB-JUDUL DI BAWAH INI -->
+            <p>Media Belajar Persiapan OSN IPS Tingkat SD</p>
+            <button onclick="closeWelcome()">Masuk ke Menu</button>
+        </div>
+    </div>
+
+    <!-- 2. KONTEN UTAMA (Muncul setelah pop-up ditutup) -->
+    <div id="main-content" class="hidden">
+        
+        <!-- HEADER & LOGO -->
+        <header class="header">
+            <div class="logo-container">
+                <!-- GANTI LINK DI src="Link_Gambar_Gdrive" DENGAN URL LOGO ANDA -->
+                <img id="logo-sd" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Logo_SD.png" alt="Logo">
+            </div>
+            <!-- GANTI TEKS HEADER DI BAWAH INI -->
+            <h2>OSN IPS - SMART WEB</h2>
+        </header>
+
+        <!-- 3. HALAMAN MENU (Tampilan Grid) -->
+        <main id="menu-page" class="page-content active">
+            <div class="grid-menu">
+                <!-- TOMBOL MATERI -->
+                <button class="menu-item" onclick="showPage('materi-page')">
+                    <i class="fas fa-book-open" style="color: #0056b3;"></i>
+                    <span>Materi</span>
+                </button>
+
+                <!-- TOMBOL VIDEO -->
+                <button class="menu-item" onclick="showPage('video-page')">
+                    <i class="fas fa-play-circle" style="color: #e53e3e;"></i>
+                    <span>Video</span>
+                </button>
+
+                <!-- TOMBOL LATIHAN SOAL -->
+                <button class="menu-item" onclick="showPage('soal-page')">
+                    <i class="fas fa-edit" style="color: #38a169;"></i>
+                    <span>Latihan Soal</span>
+                </button>
+
+                <!-- TOMBOL HUBUNGI GURU -->
+                <!-- GANTI LINK https://wa.me/xxx DENGAN NOMOR WA ANDA -->
+                <a href="https://wa.me/628123456789" class="menu-item link-button">
+                    <i class="fas fa-user-tie" style="color: #d69e2e;"></i>
+                    <span>Hubungi Guru</span>
+                </a>
+            </div>
+        </main>
+
+        <!-- 4. SUB-HALAMAN (Halaman Isi) -->
+        
+        <!-- HALAMAN MATERI -->
+        <section id="materi-page" class="page-content">
+            <button class="back-btn" onclick="showPage('menu-page')">← Kembali</button>
+            <h3 class="page-title">Daftar Materi IPS</h3>
+            <!-- TAMBAH/EDIT DAFTAR MATERI DI BAWAH INI -->
+            <div class="list-container">
+                <div class="list-item">Sub Bab 1: Geografi Indonesia</div>
+                <div class="list-item">Sub Bab 2: Sejarah Perjuangan</div>
+                <div class="list-item">Sub Bab 3: Interaksi Sosial</div>
+            </div>
+        </section>
+
+        <!-- HALAMAN VIDEO -->
+        <section id="video-page" class="page-content">
+            <button class="back-btn" onclick="showPage('menu-page')">← Kembali</button>
+            <h3 class="page-title">Video Pembelajaran</h3>
+            <!-- TAMBAH/EDIT DAFTAR VIDEO DI BAWAH INI -->
+            <div class="list-container">
+                <div class="list-item">Video: Keragaman Budaya</div>
+                <div class="list-item">Video: Ekonomi Kreatif</div>
+            </div>
+        </section>
+
+        <!-- HALAMAN LATIHAN SOAL -->
+        <section id="soal-page" class="page-content">
+            <button class="back-btn" onclick="showPage('menu-page')">← Kembali</button>
+            <h3 class="page-title">Latihan Soal OSN</h3>
+            <!-- TAMBAH/EDIT DAFTAR SOAL DI BAWAH INI -->
+            <div class="list-container">
+                <div class="list-item highlight">Simulasi Mandiri Paket 1</div>
+                <div class="list-item highlight">Latihan Soal Tahun Lalu</div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Made by Diyan Moniq Saputro</p>
+        </footer>
+    </div>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>

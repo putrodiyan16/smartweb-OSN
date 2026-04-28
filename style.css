@@ -52,29 +52,29 @@ button, .menu-item, .list-item, .back-btn-full {
 }
 
 /* --- OVERLAY SELAMAT DATANG --- */
-.welcome-container {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 20, 40, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 20px;
-    backdrop-filter: blur(8px);
+/* Perbaikan Tombol di Halaman Selamat Datang */
+.welcome-card button {
+    display: inline-block;
+    background: linear-gradient(45deg, var(--osn-blue-main), var(--osn-blue-dark));
+    color: white !important; /* Warna tulisan wajib putih */
+    border: none;
+    padding: 15px 40px;      /* Membuat kotak lebih besar dan nyaman */
+    border-radius: 12px;     /* Kotak dengan sudut sedikit melengkung (modern) */
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 86, 179, 0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Membuat tulisan jadi huruf besar semua agar tegas */
+    letter-spacing: 1px;
+    margin-top: 10px;
 }
 
-.welcome-card {
-    background: var(--white);
-    padding: 50px 30px;
-    border-radius: 25px;
-    text-align: center;
-    max-width: 420px;
-    width: 100%;
-    box-shadow: var(--shadow-lg);
-    border: 3px solid var(--osn-yellow);
+.welcome-card button:hover {
+    transform: translateY(-3px); /* Efek melompat sedikit saat didekati kursor */
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
+    filter: brightness(1.1);    /* Warna kotak sedikit lebih terang saat hover */
 }
-
 /* --- HEADER & LOGO --- */
 .header {
     background: linear-gradient(135deg, var(--osn-blue-dark), var(--osn-blue-main));

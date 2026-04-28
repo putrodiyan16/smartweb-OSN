@@ -125,8 +125,8 @@ button, .menu-item, .list-item, .back-btn-full {
 }
 
 .logo-container img {
-    height: 120px;       /* Ubah dari 90px menjadi 120px atau lebih besar */
-    width: 120px;        /* Ubah dari 90px menjadi 120px atau lebih besar */
+    height: 150px;       /* Ubah dari 90px menjadi 120px atau lebih besar */
+    width: 150px;        /* Ubah dari 90px menjadi 120px atau lebih besar */
     background: white;
     padding: 0px;        /* Ubah padding menjadi 0 agar logo mepet ke tepi lingkaran */
     border-radius: 50%;
